@@ -1,0 +1,210 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="ホーム">
+  <!-- ヒーローセクション -->
+  <section
+    class="relative h-[85vh] flex items-center justify-center overflow-hidden bg-club-blue text-white"
+  >
+    <div
+      class="absolute inset-0 opacity-40 bg-cover bg-center"
+      style={`background-image: url('${import.meta.env.BASE_URL}image/nerimashosc_home.jpg')`}
+    >
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <div
+        class="inline-block bg-club-yellow text-club-blue px-4 py-1 font-black skew-x-[-15deg] mb-6"
+      >
+        <span class="block skew-x-[15deg] italic">SINCE 1977</span>
+      </div>
+      <h1
+        class="text-5xl md:text-7xl font-black italic tracking-tighter mb-6 leading-[0.9] animate-fade-in shadow-text"
+      >
+        サッカーは、<br />子どもを大人にする。
+      </h1>
+      <p
+        class="text-xl md:text-2xl font-bold mb-10 text-club-yellow drop-shadow-lg"
+      >
+        練馬小学校で45年以上愛される、地域密着のサッカークラブ。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button
+          href={`${import.meta.env.BASE_URL}about`}
+          class="text-xl px-10 py-4 shadow-xl"
+        >
+          まずは体験・見学へ
+        </Button>
+        <Button
+          href={`${import.meta.env.BASE_URL}policy`}
+          variant="outline"
+          class="text-xl px-10 py-4 border-white text-white !hover:bg-white hover:text-club-blue"
+        >
+          指導方針を見る
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 紹介セクション -->
+  <section class="py-24 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-black italic mb-8 text-club-blue">
+          ようこそ！練馬小SCへ
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          練馬小学校サッカークラブは、練馬小学校と周辺に住む小学生（練馬小、高松小、光が丘第八小、田柄小など）を対象とした、地域に根ざしたチームです。
+          1977年の設立以来、サッカーを通してマナーの向上、体力の向上、そして健全な育成を目指して活動しています。
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-club-yellow/10 p-4 rounded-xl">
+            <p class="text-2xl font-black text-club-blue">1977</p>
+            <p
+              class="text-xs font-bold text-gray-500 uppercase tracking-widest"
+            >
+              Established
+            </p>
+          </div>
+          <div class="bg-club-yellow/10 p-4 rounded-xl">
+            <p class="text-2xl font-black text-club-blue">地域密着</p>
+            <p
+              class="text-xs font-bold text-gray-500 uppercase tracking-widest"
+            >
+              Community
+            </p>
+          </div>
+          <div class="bg-club-yellow/10 p-4 rounded-xl">
+            <p class="text-2xl font-black text-club-blue">全学年</p>
+            <p
+              class="text-xs font-bold text-gray-500 uppercase tracking-widest"
+            >
+              Grades 1-6
+            </p>
+          </div>
+          <div class="bg-club-yellow/10 p-4 rounded-xl">
+            <p class="text-2xl font-black text-club-blue">幼児クラス</p>
+            <p
+              class="text-xs font-bold text-gray-500 uppercase tracking-widest"
+            >
+              Preschooler
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 練習場所・時間 -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2
+        class="text-3xl md:text-4xl font-black italic mb-12 text-center text-club-blue underline decoration-club-yellow decoration-8 underline-offset-8"
+      >
+        練習時間と場所
+      </h2>
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div
+          class="bg-white p-8 rounded-3xl shadow-xl border-l-8 border-club-blue"
+        >
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span
+              class="bg-club-blue text-white w-10 h-10 rounded-full flex items-center justify-center text-sm italic"
+              >THU</span
+            >
+            木曜日
+          </h3>
+          <div class="space-y-4">
+            <p class="flex justify-between border-b pb-2">
+              <span class="font-bold">時間</span>
+              <span class="text-club-blue font-black tracking-tight"
+                >17:00 〜 19:00</span
+              >
+            </p>
+            <p class="flex justify-between border-b pb-2">
+              <span class="font-bold">場所</span>
+              <span>練馬小学校 体育館</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white p-8 rounded-3xl shadow-xl border-l-8 border-club-yellow"
+        >
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span
+              class="bg-club-yellow text-club-blue w-10 h-10 rounded-full flex items-center justify-center text-sm italic"
+              >W/E</span
+            >
+            土曜日・日曜日
+          </h3>
+          <div class="space-y-4">
+            <p class="flex justify-between border-b pb-2">
+              <span class="font-bold">時間</span>
+              <span class="text-club-blue font-bold italic"
+                >詳細はカレンダー参照</span
+              >
+            </p>
+            <p class="flex justify-between border-b pb-2">
+              <span class="font-bold">場所</span>
+              <span>練馬小学校 校庭</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <Button
+          href={`${import.meta.env.BASE_URL}schedule`}
+          variant="secondary"
+          class="px-12 py-4"
+        >
+          練習カレンダーを確認する
+        </Button>
+      </div>
+    </div>
+  </section>
+  <!-- CTAセクション -->
+  <section class="py-20 bg-club-blue text-white overflow-hidden relative">
+    <div
+      class="absolute right-0 top-0 text-[10rem] font-black text-white/5 italic select-none -translate-y-1/2 translate-x-1/4"
+    >
+      JOIN US!
+    </div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2 class="text-4xl md:text-6xl font-black mb-6 animate-pulse">
+        一緒にサッカーしよう！
+      </h2>
+      <p class="text-xl mb-10 text-club-yellow font-bold">
+        無料体験はいつでも受付中。動きやすい服で遊びに来てね！
+      </p>
+      <div class="flex flex-col items-center gap-4">
+        <Button
+          href={`${import.meta.env.BASE_URL}contact`}
+          class="text-2xl px-16 py-6 bg-club-yellow text-club-blue hover:scale-110 transition-transform shadow-2xl"
+        >
+          今すぐ体験を申し込む
+        </Button>
+        <p class="text-sm font-medium opacity-60">nerimasho.sc@gmail.com</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 1.2s ease-out forwards;
+  }
+  .shadow-text {
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+</style>

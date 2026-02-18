@@ -1,0 +1,234 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "練馬小学校サッカークラブ（練馬小SC）の公式ホームページです。練馬小学校を拠点に活動する、1977年創立の歴史ある地域密着チームです。",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={`${import.meta.env.BASE_URL}image/club_emblem.jpg`}
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | 練馬小学校サッカークラブ（練馬小SC）</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col font-sans">
+    <header class="sticky top-0 z-50 bg-club-yellow text-club-blue shadow-md">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href={import.meta.env.BASE_URL} class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-club-blue bg-yellow-300 flex-shrink-0"
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}image/club_emblem.jpg`}
+              alt="練馬小SC エンブレム"
+              class="w-full h-full object-contain p-0.5"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="text-xl md:text-2xl font-black italic tracking-tighter leading-none"
+            >
+              NERIMASHO SC
+            </span>
+            <span
+              class="hidden lg:inline-block text-[10px] font-bold border-l border-club-blue/30 pl-2 leading-tight mt-1"
+            >
+              練馬小学校<br />サッカークラブ
+            </span>
+          </div>
+        </a>
+        <nav class="hidden md:flex gap-6 font-bold text-sm">
+          <a
+            href={`${import.meta.env.BASE_URL}about`}
+            class="hover:text-club-red transition-colors">初めての方へ</a
+          >
+          <a
+            href={`${import.meta.env.BASE_URL}policy`}
+            class="hover:text-club-red transition-colors">指導方針</a
+          >
+          <a
+            href={`${import.meta.env.BASE_URL}schedule`}
+            class="hover:text-club-red transition-colors">練習日程</a
+          >
+          <a
+            href={`${import.meta.env.BASE_URL}contact`}
+            class="hover:text-club-red transition-colors">お問い合わせ</a
+          >
+        </nav>
+        <button
+          id="menu-open"
+          class="md:hidden p-2"
+          aria-label="メニューを開く"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- モバイルメニューオーバーレイ -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-[100] bg-club-blue transform translate-x-full transition-transform duration-300 md:hidden"
+    >
+      <div class="flex flex-col h-full p-6 text-white text-center">
+        <div class="flex justify-between items-center mb-12">
+          <span class="text-xl font-black italic">MENU</span>
+          <button id="menu-close" class="p-2" aria-label="メニューを閉じる">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-8 text-2xl font-black italic">
+          <a href={import.meta.env.BASE_URL} class="mobile-nav-link">HOME</a>
+          <a href={`${import.meta.env.BASE_URL}about`} class="mobile-nav-link"
+            >初めての方へ</a
+          >
+          <a href={`${import.meta.env.BASE_URL}policy`} class="mobile-nav-link"
+            >指導方針</a
+          >
+          <a
+            href={`${import.meta.env.BASE_URL}schedule`}
+            class="mobile-nav-link">練習日程</a
+          >
+          <a
+            href={`${import.meta.env.BASE_URL}contact`}
+            class="mobile-nav-link text-club-yellow">お問い合わせ</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <script>
+      const menuOpen = document.getElementById("menu-open");
+      const menuClose = document.getElementById("menu-close");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const body = document.body;
+
+      function toggleMenu() {
+        mobileMenu?.classList.toggle("translate-x-full");
+        body.style.overflow = mobileMenu?.classList.contains("translate-x-full")
+          ? ""
+          : "hidden";
+      }
+
+      menuOpen?.addEventListener("click", toggleMenu);
+      menuClose?.addEventListener("click", toggleMenu);
+
+      // リンクがクリックされたら閉じる
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", toggleMenu);
+      });
+    </script>
+
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <footer class="bg-club-black text-white py-8 mt-10">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col items-center gap-6">
+          <nav
+            class="flex flex-wrap justify-center gap-x-6 gap-y-2 font-bold text-sm"
+          >
+            <a
+              href={`${import.meta.env.BASE_URL}about`}
+              class="hover:text-club-yellow transition-colors">初めての方へ</a
+            >
+            <a
+              href={`${import.meta.env.BASE_URL}policy`}
+              class="hover:text-club-yellow transition-colors">指導方針</a
+            >
+            <a
+              href={`${import.meta.env.BASE_URL}schedule`}
+              class="hover:text-club-yellow transition-colors">練習日程</a
+            >
+            <a
+              href={`${import.meta.env.BASE_URL}contact`}
+              class="hover:text-club-yellow transition-colors">お問い合わせ</a
+            >
+          </nav>
+
+          <p class="text-xs text-gray-400 font-medium">
+            お問い合わせ：nerimasho.sc@gmail.com
+          </p>
+
+          <div class="w-full border-t border-gray-800 pt-4 text-center">
+            <p class="text-[10px] text-gray-500 tracking-wider">
+              &copy; {new Date().getFullYear()} Nerima Elementary School Soccer Club.
+              All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- スマホ用固定CTAボタン -->
+    <div class="md:hidden fixed bottom-6 right-6 z-50">
+      <a
+        href={`${import.meta.env.BASE_URL}contact`}
+        class="bg-club-red text-white font-bold py-4 px-6 rounded-full shadow-2xl flex items-center gap-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+          ></path>
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+          ></path>
+        </svg>
+        体験・見学申込
+      </a>
+    </div>
+  </body>
+</html>

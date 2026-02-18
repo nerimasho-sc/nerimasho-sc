@@ -1,0 +1,243 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout
+  title="指導方針・スタッフ"
+  description="練馬小学校サッカークラブの指導理念と、JFA公認資格を持つ実力派コーチングスタッフをご紹介します。"
+>
+  <!-- ヒーロー -->
+  <div class="py-20 bg-club-blue text-white relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510566337590-2fc162bc000d?auto=format&fit=crop&q=80&w=800')] opacity-10 blur-sm"
+    >
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <h1
+        class="text-4xl md:text-6xl font-black italic tracking-tighter mb-4 text-club-yellow"
+      >
+        指導方針
+      </h1>
+      <p class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span class="w-2 h-8 bg-club-yellow block"></span>
+        「サッカーは、子どもを大人にする」を礎に、健全な心身の育成を目指します。
+      </p>
+    </div>
+  </div>
+
+  <!-- 指導の4本柱 -->
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-black italic mb-16 text-center text-club-blue">
+        指導の4本柱
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div
+          class="group p-8 bg-gray-50 rounded-3xl border-b-8 border-club-yellow hover:bg-club-yellow hover:text-club-blue transition-all"
+        >
+          <span
+            class="text-4xl font-black opacity-30 block mb-4 group-hover:opacity-100"
+            >01</span
+          >
+          <h3 class="text-2xl font-black mb-4 leading-tight">
+            サッカーを楽しみ、<br />友達と絆を作ろう！
+          </h3>
+          <p class="leading-relaxed opacity-80">
+            まずは蹴ることから。チームでまとまって練習を行うことで自然に絆が生まれます。失敗しても大丈夫、挑戦すること自体を称賛します。
+          </p>
+        </div>
+        <div
+          class="group p-8 bg-gray-50 rounded-3xl border-b-8 border-club-blue hover:bg-club-blue hover:text-white transition-all"
+        >
+          <span
+            class="text-4xl font-black opacity-30 block mb-4 group-hover:opacity-100"
+            >02</span
+          >
+          <h3 class="text-2xl font-black mb-4 leading-tight">
+            サッカーの技術や<br />戦術の向上を目指そう！
+          </h3>
+          <p class="leading-relaxed opacity-80">
+            心技一体の向上を目指し、図解を用いた戦術理解も深めます。自ら考え、判断し、行動できる選手の育成を支援します。
+          </p>
+        </div>
+        <div
+          class="group p-8 bg-gray-50 rounded-3xl border-b-8 border-club-red hover:bg-club-red hover:text-white transition-all"
+        >
+          <span
+            class="text-4xl font-black opacity-30 block mb-4 group-hover:opacity-100"
+            >03</span
+          >
+          <h3 class="text-2xl font-black mb-4 leading-tight">
+            リスペクト精神で<br />「こころ」を成長させよう！
+          </h3>
+          <p class="leading-relaxed opacity-80">
+            仲間、相手、指導者、道具への感謝を忘れない。社会生活でリスペクトを持ち、誠実な人生を共有することを学びます。
+          </p>
+        </div>
+        <div
+          class="group p-8 bg-gray-50 rounded-3xl border-b-8 border-club-black hover:bg-club-black hover:text-white transition-all"
+        >
+          <span
+            class="text-4xl font-black opacity-30 block mb-4 group-hover:opacity-100"
+            >04</span
+          >
+          <h3 class="text-2xl font-black mb-4 leading-tight">
+            将来の自分を考えよう！
+          </h3>
+          <p class="leading-relaxed opacity-80">
+            サッカーだけでなく教養やキャリアにも目を向けられるよう、スタッフによるキャリア教育やリベラルアーツの情報共有も行っています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- スタッフ紹介 -->
+  <section class="py-24 bg-gray-100">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2
+        class="text-3xl md:text-4xl font-black italic mb-16 text-center text-club-blue"
+      >
+        コーチングスタッフ
+      </h2>
+
+      <div class="space-y-12">
+        <!-- 役員 -->
+        <div class="grid md:grid-cols-3 gap-6">
+          <Card class="text-center">
+            <p class="text-xs font-bold text-club-red mb-1">代表</p>
+            <p class="text-xl font-black mb-2">金子 幸広</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFAサッカー4級審判員</p>
+            <p class="text-[10px] text-gray-500 mb-2">
+              マッチウェルフェアオフィサー
+            </p>
+            <p class="text-sm font-medium italic">
+              褒められた子供の笑顔を見ると嬉しくなります。笑顔が絶えないチーム運営を心掛けています。
+            </p>
+          </Card>
+          <Card class="text-center">
+            <p class="text-xs font-bold text-club-red mb-1">副代表</p>
+            <p class="text-xl font-black mb-2">田中 誠一</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFAサッカー4級審判員</p>
+            <p class="text-[10px] text-gray-500 mb-2">
+              マッチウェルフェアオフィサー
+            </p>
+            <p class="text-sm font-medium italic">
+              友達との比較より、過去の自分との比較で上達を感じられる指導を行います。
+            </p>
+          </Card>
+          <Card class="text-center border-club-blue/20">
+            <p class="text-xs font-bold text-club-red mb-1">顧問</p>
+            <p class="text-xl font-black mb-2">増田 隆彰</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
+            <p class="text-[10px] text-gray-500 mb-2">
+              マッチウェルフェアオフィサー
+            </p>
+            <p class="text-[10px] text-gray-500 mb-2">
+              <br />
+            </p>
+            <p class="text-sm font-medium italic">
+              「サッカーは、子どもを大人にする」をモットーに子ども達の資質を伸ばします！
+            </p>
+          </Card>
+          <Card class="text-center border-club-blue/20">
+            <p class="text-xs font-bold text-club-red mb-1">監督</p>
+            <p class="text-xl font-black mb-2">濱岡 篤</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFA公認C級指導者</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFAサッカー4級審判員</p>
+            <p class="text-[10px] text-gray-500 mb-2">
+              マッチウェルフェアオフィサー
+            </p>
+            <p class="text-sm font-medium italic">
+              サッカー大好き、一緒にサッカーに取り組み、楽しみましょう！
+            </p>
+          </Card>
+          <Card class="text-center border-club-blue/20">
+            <p class="text-xs font-bold text-club-red mb-1">コーチ</p>
+            <p class="text-xl font-black mb-2">富澤 孝</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFAサッカー4級審判員</p>
+            <p class="text-[10px] text-gray-500 mb-2">
+              <br />
+            </p>
+            <p class="text-sm font-medium italic">
+              サッカーは技術が向上すればするほどより深く楽しめます。一緒に汗を流しましょう！
+            </p>
+          </Card>
+          <Card class="text-center border-club-blue/20">
+            <p class="text-xs font-bold text-club-red mb-1">コーチ</p>
+            <p class="text-xl font-black mb-2">高木 充彦</p>
+            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
+            <p class="text-[10px] text-gray-500 mb-2">
+              <br />
+            </p>
+            <p class="text-[10px] text-gray-500 mb-2">
+              <br />
+            </p>
+            <p class="text-sm font-medium italic">
+              「サッカーは、人生の縮図です」包容力のあるマルチ指導者
+            </p>
+          </Card>
+        </div>
+
+        <!-- コーチリスト -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg">
+          <h3 class="font-black text-xl mb-6 text-center border-b pb-4">
+            コーチ陣
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-sm">
+            <div>
+              <p class="font-bold">コーチ：深澤 優真</p>
+              <p class="text-[10px] text-gray-400">
+                JFA公認C級指導者<br />JFAサッカー3級審判員
+              </p>
+            </div>
+            <div>
+              <p class="font-bold">コーチ：岩城 俊一</p>
+              <p class="text-[10px] text-gray-400">
+                JFA公認D級指導者<br />JFAサッカー4級審判員
+              </p>
+            </div>
+            <div>
+              <p class="font-bold">コーチ：新地 潤一</p>
+              <p class="text-[10px] text-gray-400">
+                JFA公認D級指導者<br />JFAサッカー4級審判員<br
+                />JFA公認キッズリーダー
+              </p>
+            </div>
+            <div>
+              <p class="font-bold">コーチ：中村 佑一</p>
+              <p class="text-[10px] text-gray-400">
+                JFA公認D級指導者<br />JFAサッカー4級審判員
+              </p>
+            </div>
+            <div>
+              <p class="font-bold">コーチ：大澤 和典</p>
+              <p class="text-[10px] text-gray-400">
+                JFA公認D級指導者<br />JFAサッカー4級審判員
+              </p>
+            </div>
+            <div>
+              <p class="font-bold">コーチ：伊藤 裕央</p>
+              <p class="text-[10px] text-gray-400">JFAサッカー4級審判員</p>
+            </div>
+            <div>
+              <p class="font-bold">コーチ：天野 宏紀</p>
+              <p class="text-[10px] text-gray-400">
+                JFA公認D級指導者<br />JFAサッカー4級審判員
+              </p>
+            </div>
+          </div>
+          <p class="mt-8 text-center text-xs text-gray-400">
+            練馬小SCは、卒業生や保護者、現保護者の指導によるボランティアクラブです。<br
+            />
+            JFA公認資格を持つ多くのスタッフが、安全と成長をサポートしています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

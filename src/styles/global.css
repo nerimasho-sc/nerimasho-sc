@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --color-club-yellow: #FACC15;
+    --color-club-blue: #1E40AF;
+    --color-club-red: #DC2626;
+    --color-club-black: #171717;
+
+    --font-sans: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+    body {
+        @apply text-club-black bg-white font-sans;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-block px-6 py-3 bg-club-yellow text-club-blue font-bold rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md;
+    }
+}

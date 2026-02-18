@@ -1,0 +1,184 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout
+  title="初めての方へ"
+  description="練馬小学校サッカークラブへの入校・体験案内。部費や必要なもの、入部までの流れなどをご案内します。"
+>
+  <div class="py-16 bg-club-yellow/5">
+    <div class="container mx-auto px-4">
+      <h1
+        class="text-4xl md:text-6xl font-black italic tracking-tighter text-club-blue mb-6"
+      >
+        初めての方へ
+      </h1>
+      <p
+        class="text-xl md:text-2xl font-bold border-l-8 border-club-yellow pl-6 text-gray-800 leading-tight"
+      >
+        「もっと早く入りたかった」<br class="md:hidden" />
+        入部した方からよく聞く言葉です。
+      </p>
+    </div>
+  </div>
+
+  <section class="py-20">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div
+        class="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl border-4 border-club-yellow mb-20 relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 right-0 p-8 text-club-yellow opacity-10 pointer-events-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-32 h-32"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+            ></path></svg
+          >
+        </div>
+        <h2
+          class="text-3xl font-black text-club-blue mb-8 border-b-2 border-club-blue/10 pb-4"
+        >
+          知っておきたい4つのこと
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div>
+            <h3 class="text-xl font-bold text-club-red mb-4">
+              ① お当番について
+            </h3>
+            <p class="text-gray-700 leading-relaxed italic">
+              「当番が大変そう...」という不安はありませんか？<br />
+              現在はボランティア指導者が主体となって運営しており、お当番（世話人制度）は<strong
+                >小学5年生のみ</strong
+              >に限定されています。その他の学年では、保護者の負担を最小限に抑えた運営を心がけています。
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-club-red mb-4">
+              ② 未就学児も大歓迎！
+            </h3>
+            <p class="text-gray-700 leading-relaxed">
+              年少〜年長の「幼児クラス」を設けています。まずはボール遊びからスタートし、広いグラウンドで思いっきりシュートを打つ楽しさを体験できます。
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-club-red mb-4">
+              ③ 学校を越えた仲間づくり！
+            </h3>
+            <p class="text-gray-700 leading-relaxed">
+              練馬小だけでなく、近隣の様々な小学校（高松小、光が丘第八小など）から児童が集まっています。学校や学年を越えた仲間ができるのは、地域密着のサッカークラブならではの魅力。サッカーを通じて、一生モノの友情を育むことができます。
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-club-red mb-4">
+              ④ 初心者・女の子も大歓迎！
+            </h3>
+            <p class="text-gray-700 leading-relaxed">
+              サッカー経験がなくても大丈夫。専任のコーチが一人ひとりのレベルに合わせて丁寧に指導します。また、女の子の部員も在籍しており、性別を問わず仲良く元気に活動しています。まずは「ボールを蹴る楽しさ」から体験してみませんか？
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-24">
+        <h2 class="text-3xl font-black text-center mb-12 italic text-club-blue">
+          募集概要
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <Card title="対象小学校">
+            <p class="font-bold text-club-blue mb-2">
+              練馬周辺の各小学校から集まっています
+            </p>
+            <ul class="list-disc list-inside text-sm space-y-1">
+              <li>練馬小学校</li>
+              <li>高松小学校</li>
+              <li>光が丘第八小学校</li>
+              <li>田柄小学校 など</li>
+            </ul>
+          </Card>
+          <Card title="対象学年">
+            <p><strong>未就学児 〜 小学6年生</strong></p>
+            <p class="text-xs mt-2 text-gray-500">
+              ※男女問わず大歓迎！他校からの参加も多いのが特徴です。
+            </p>
+          </Card>
+          <Card title="会費（部費）">
+            <ul class="space-y-4 text-sm">
+              <li class="flex justify-between border-b pb-1">
+                <span>月会費（部費）</span>
+                <span class="font-black">2,000円</span>
+              </li>
+              <li class="flex justify-between border-b pb-1">
+                <span>ユニフォームレンタル</span>
+                <span class="font-black">1,000円 / 年</span>
+              </li>
+              <li class="flex justify-between border-b pb-1">
+                <span>選手登録費・諸費用</span>
+                <span class="font-black">1,000円 / 年</span>
+              </li>
+            </ul>
+            <p class="text-[10px] mt-2 text-gray-400">
+              ※スポーツ保険料は会費に含まれます。
+            </p>
+          </Card>
+          <Card title="持ち物">
+            <ul class="list-disc list-inside text-sm space-y-1">
+              <li>運動しやすい服装・シューズ</li>
+              <li>水筒（多めに）</li>
+              <li>サッカーボール（貸出も可能です！）</li>
+            </ul>
+          </Card>
+        </div>
+      </div>
+
+      <div
+        class="bg-club-blue text-white rounded-[3rem] p-10 md:p-16 text-center shadow-text relative"
+      >
+        <h2
+          class="text-4xl md:text-5xl font-black mb-12 italic text-club-yellow leading-tight"
+        >
+          さあ、体験練習へ行こう！
+        </h2>
+        <div
+          class="max-w-2xl mx-auto space-y-8 mb-12 text-left md:text-center text-lg"
+        >
+          <p>
+            「どんな雰囲気かな？」「コーチは怖くないかな？」といった不安を、実際の練習で解消しましょう。
+          </p>
+          <p class="font-bold text-club-yellow">
+            何回でも無料で体験いただけます！
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-6 justify-center items-center"
+        >
+          <Button
+            href={`${import.meta.env.BASE_URL}contact`}
+            variant="primary"
+            class="text-2xl px-12 py-6 scale-110 shadow-2xl"
+          >
+            体験・入部を申し込む
+          </Button>
+          <div
+            class="text-sm font-bold opacity-80 border-2 border-white/20 p-4 rounded-xl"
+          >
+            nerimasho.sc@gmail.com<br />
+            お急ぎの方はこちらへ
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .shadow-text {
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+</style>

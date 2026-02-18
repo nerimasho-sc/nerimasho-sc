@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+
+const CONTACT_EMAIL = "nerimasho.sc@gmail.com";
+const GOOGLE_FORM_URL = "https://forms.gle/6oB1xPcYdttPdKJP7";
+---
+
+<Layout
+  title="お問い合わせ"
+  description="練馬小学校サッカークラブへの体験・見学・質問など、お気軽にお問い合わせください。"
+>
+  <div class="py-16 bg-club-red text-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-black italic tracking-tighter mb-4">
+        CONTACT
+      </h1>
+      <p class="text-xl font-bold border-l-4 border-white pl-4">
+        体験・見学、いつでも大歓迎です。
+      </p>
+    </div>
+  </div>
+
+  <section class="py-20">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid lg:grid-cols-5 gap-12">
+        <div class="lg:col-span-3">
+          <h2
+            class="text-2xl font-black mb-8 border-b-4 border-club-yellow inline-block"
+          >
+            お問い合わせはこちら
+          </h2>
+          <div
+            class="bg-gray-50 p-8 rounded-[2rem] border-2 border-dashed border-gray-200 shadow-inner mb-12"
+          >
+            <p class="text-gray-700 leading-relaxed mb-8">
+              体験参加、その他クラブに関するご質問は、以下のGoogleフォームからお送りください。<br
+              />
+              <strong>通常、2〜3日以内</strong
+              >に担当者（増田）より折り返しご連絡いたします。
+            </p>
+            <Button
+              href={GOOGLE_FORM_URL}
+              class="w-full py-6 text-2xl shadow-2xl scale-105 active:scale-100 transition-transform"
+            >
+              お申し込みフォームを開く
+            </Button>
+            <p class="mt-8 text-center text-xs text-gray-400">
+              ※Googleアカウントがなくても送信可能です。
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <h3 class="font-bold flex items-center gap-2">
+              <span
+                class="w-8 h-8 bg-club-blue text-white rounded-full flex items-center justify-center text-xs italic"
+                >Q&A</span
+              >
+              よくある質問
+            </h3>
+            <div class="space-y-4">
+              <details
+                class="group bg-white border border-gray-200 rounded-2xl p-4 shadow-sm"
+              >
+                <summary
+                  class="font-bold cursor-pointer list-none flex justify-between items-center group-open:text-club-blue"
+                >
+                  未経験ですが大丈夫ですか？
+                  <span
+                    class="transition-transform group-open:rotate-180 text-club-yellow"
+                    >▼</span
+                  >
+                </summary>
+                <p class="mt-4 text-sm text-gray-600 leading-relaxed">
+                  もちろんです！低学年には多くの指導者がつき、ボールに触れる楽しさから丁寧に教えます。
+                </p>
+              </details>
+              <details
+                class="group bg-white border border-gray-200 rounded-2xl p-4 shadow-sm"
+              >
+                <summary
+                  class="font-bold cursor-pointer list-none flex justify-between items-center group-open:text-club-blue"
+                >
+                  女子はいますか？
+                  <span
+                    class="transition-transform group-open:rotate-180 text-club-yellow"
+                    >▼</span
+                  >
+                </summary>
+                <p class="mt-4 text-sm text-gray-600 leading-relaxed">
+                  各学年で女の子が元気にプレーしています。性別に関わらず歓迎しています。
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <div class="sticky top-24">
+            <Card title="メールでのお問い合わせ" class="mb-8">
+              <p class="text-xs text-gray-500 mb-2">
+                フォームが使えない場合は下記へ
+              </p>
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                class="text-club-blue font-black underline break-all"
+              >
+                {CONTACT_EMAIL}
+              </a>
+            </Card>
+
+            <Card title="主な活動場所">
+              <div class="space-y-4">
+                <div>
+                  <p class="font-bold text-sm">練馬小学校</p>
+                  <p class="text-[10px] text-gray-500">
+                    東京都練馬区春日町６丁目１１−３６
+                  </p>
+                </div>
+                <div
+                  class="aspect-video w-full rounded-xl overflow-hidden bg-gray-200"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.528416625895!2d139.6335118764058!3d35.75215467256428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ec4f5c145305%3A0x9a9c4a1fe2a5b156!2z57e06aas5Yy656uL57e06aas5bCP5a2m5qCh!5e0!3m2!1sja!2sjp!4v1715840000000!5m2!1sja!2sjp"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"></iframe>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
