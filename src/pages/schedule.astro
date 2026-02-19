@@ -1,12 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.astro';
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 
-const CALENDAR_ID = 't48n8athinasqfb76j9v0149pk@group.calendar.google.com';
+const CALENDAR_ID = "t48n8athinasqfb76j9v0149pk@group.calendar.google.com";
 const CALENDAR_URL = `https://calendar.google.com/calendar/embed?src=${CALENDAR_ID}&ctz=Asia%2FTokyo`;
 ---
 
-<Layout title="練習日程" description="練馬小学校サッカークラブの最新活動スケジュール。Googleカレンダーで各学年の練習時間をいつでも確認できます。">
+<Layout
+  title="練習日程"
+  description="練馬小学校サッカークラブの最新活動スケジュール。Googleカレンダーで各学年の練習時間をいつでも確認できます。"
+>
   <!-- ヒーロー -->
   <div class="py-16 bg-club-yellow">
     <div class="container mx-auto px-4 text-club-blue">
@@ -23,30 +26,48 @@ const CALENDAR_URL = `https://calendar.google.com/calendar/embed?src=${CALENDAR_
   <section class="py-16">
     <div class="container mx-auto px-4">
       <div class="max-w-5xl mx-auto">
-        <div class="mb-12 bg-gray-50 border-l-4 border-club-blue p-6 rounded-r-2xl">
-          <p class="text-sm font-bold text-club-blue mb-2">【ご注意】Googleカレンダーが表示されない場合</p>
+        <div
+          class="mb-12 bg-gray-50 border-l-4 border-club-blue p-6 rounded-r-2xl"
+        >
+          <p class="text-sm font-bold text-club-blue mb-2">
+            【ご注意】Googleカレンダーが表示されない場合
+          </p>
           <p class="text-xs text-gray-600 leading-relaxed">
             iPhoneやMacのSafariをご使用中で「私はロボットではありません」と表示される場合は、設定の「サイト越えトラッキングを防ぐ」をオフにするか、以下の「大きなカレンダーで見る」ボタンから直接ご確認ください。
           </p>
         </div>
 
         <!-- Google Calendar Embed -->
-        <div class="aspect-video w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-club-blue/10 bg-white">
-          <iframe 
-            src={CALENDAR_URL} 
-            style="border: 0" 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            scrolling="no"
-          ></iframe>
+        <div
+          class="w-full h-[500px] md:h-auto md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-4 border-club-blue/10 bg-white"
+        >
+          <iframe
+            src={CALENDAR_URL}
+            style="border: 0"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"></iframe>
         </div>
 
         <div class="mt-8 flex justify-center">
-          <Button href={CALENDAR_URL} variant="secondary" class="px-8 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+          <Button
+            href={CALENDAR_URL}
+            variant="secondary"
+            class="px-8 flex items-center gap-2 whitespace-nowrap text-sm md:text-base"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 shrink-0"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+              ></path>
+              <path
+                d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+              ></path>
             </svg>
             大きなカレンダーで見る
           </Button>
@@ -54,20 +75,32 @@ const CALENDAR_URL = `https://calendar.google.com/calendar/embed?src=${CALENDAR_
 
         <div class="mt-20 grid md:grid-cols-2 gap-8">
           <div class="p-8 bg-club-blue text-white rounded-3xl">
-            <h3 class="text-xl font-black mb-4 italic text-club-yellow">活動場所</h3>
+            <h3 class="text-xl font-black mb-4 italic text-club-yellow">
+              活動場所
+            </h3>
             <ul class="space-y-4 text-sm">
               <li>
-                <span class="font-bold border-b border-club-yellow">練馬小学校 校庭</span><br>
-                <span class="opacity-70">主な活動拠点。土日・祝日の練習で使用します。</span>
+                <span class="font-bold border-b border-club-yellow"
+                  >練馬小学校 校庭</span
+                ><br />
+                <span class="opacity-70"
+                  >主な活動拠点。土日・祝日の練習で使用します。</span
+                >
               </li>
               <li>
-                <span class="font-bold border-b border-club-yellow">練馬小学校 体育館</span><br>
-                <span class="opacity-70">木曜日の夜間練習（17:00〜19:00）で使用します。</span>
+                <span class="font-bold border-b border-club-yellow"
+                  >練馬小学校 体育館</span
+                ><br />
+                <span class="opacity-70"
+                  >木曜日の夜間練習（17:00〜19:00）で使用します。</span
+                >
               </li>
             </ul>
           </div>
           <div class="p-8 bg-gray-100 rounded-3xl">
-            <h3 class="text-xl font-bold mb-4 italic text-club-blue">雨天等の対応</h3>
+            <h3 class="text-xl font-bold mb-4 italic text-club-blue">
+              雨天等の対応
+            </h3>
             <p class="text-sm leading-relaxed text-gray-600">
               天候不良やその他の理由による急な中止、場所変更がある場合は、各学年の連絡網(LINE等)にて個別にご連絡いたします。体験の方は当日のお問い合わせでも対応可能です。
             </p>
