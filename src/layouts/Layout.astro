@@ -10,6 +10,15 @@ const {
   title,
   description = "練馬小学校サッカークラブ（練馬小SC）の公式ホームページです。練馬小学校を拠点に活動する、1977年創立の歴史ある地域密着チームです。",
 } = Astro.props;
+
+const pathname = new URL(Astro.request.url).pathname;
+const base = import.meta.env.BASE_URL;
+
+const isActive = (path: string) => {
+  const normalizedPath = path.endsWith("/") ? path : `${path}/`;
+  const normalizedPathname = pathname.endsWith("/") ? pathname : `${pathname}/`;
+  return normalizedPathname === normalizedPath;
+};
 ---
 
 <!doctype html>
@@ -97,20 +106,24 @@ const {
         </a>
         <nav class="hidden md:flex gap-6 font-bold text-sm">
           <a
-            href={`${import.meta.env.BASE_URL}about`}
-            class="hover:text-club-red transition-colors">初めての方へ</a
+            href={`${base}about`}
+            class={`hover:text-club-red transition-colors ${isActive(`${base}about`) ? "text-club-red" : ""}`}
+            >初めての方へ</a
           >
           <a
-            href={`${import.meta.env.BASE_URL}policy`}
-            class="hover:text-club-red transition-colors">指導方針</a
+            href={`${base}policy`}
+            class={`hover:text-club-red transition-colors ${isActive(`${base}policy`) ? "text-club-red" : ""}`}
+            >指導方針</a
           >
           <a
-            href={`${import.meta.env.BASE_URL}schedule`}
-            class="hover:text-club-red transition-colors">練習日程</a
+            href={`${base}schedule`}
+            class={`hover:text-club-red transition-colors ${isActive(`${base}schedule`) ? "text-club-red" : ""}`}
+            >練習日程</a
           >
           <a
-            href={`${import.meta.env.BASE_URL}contact`}
-            class="hover:text-club-red transition-colors">お問い合わせ</a
+            href={`${base}contact`}
+            class={`hover:text-club-red transition-colors ${isActive(`${base}contact`) ? "text-club-red" : ""}`}
+            >お問い合わせ</a
           >
         </nav>
         <button
@@ -160,20 +173,30 @@ const {
           </button>
         </div>
         <nav class="flex flex-col gap-8 text-2xl font-black italic">
-          <a href={import.meta.env.BASE_URL} class="mobile-nav-link">HOME</a>
-          <a href={`${import.meta.env.BASE_URL}about`} class="mobile-nav-link"
+          <a
+            href={base}
+            class={`mobile-nav-link ${isActive(base) ? "text-club-yellow" : ""}`}
+            >HOME</a
+          >
+          <a
+            href={`${base}about`}
+            class={`mobile-nav-link ${isActive(`${base}about`) ? "text-club-yellow" : ""}`}
             >初めての方へ</a
           >
-          <a href={`${import.meta.env.BASE_URL}policy`} class="mobile-nav-link"
+          <a
+            href={`${base}policy`}
+            class={`mobile-nav-link ${isActive(`${base}policy`) ? "text-club-yellow" : ""}`}
             >指導方針</a
           >
           <a
-            href={`${import.meta.env.BASE_URL}schedule`}
-            class="mobile-nav-link">練習日程</a
+            href={`${base}schedule`}
+            class={`mobile-nav-link ${isActive(`${base}schedule`) ? "text-club-yellow" : ""}`}
+            >練習日程</a
           >
           <a
-            href={`${import.meta.env.BASE_URL}contact`}
-            class="mobile-nav-link text-club-yellow">お問い合わせ</a
+            href={`${base}contact`}
+            class={`mobile-nav-link ${isActive(`${base}contact`) ? "text-club-yellow" : ""}`}
+            >お問い合わせ</a
           >
         </nav>
       </div>
