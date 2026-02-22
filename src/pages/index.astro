@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import homeHeroImage from "../assets/image/nerimashosc_home.jpg";
 ---
 
 <Layout title="ホーム">
@@ -8,11 +10,12 @@ import Button from "../components/Button.astro";
   <section
     class="relative h-[85vh] flex items-center justify-center overflow-hidden bg-club-blue text-white"
   >
-    <div
-      class="absolute inset-0 opacity-40 bg-cover bg-center"
-      style={`background-image: url('${import.meta.env.BASE_URL}image/nerimashosc_home.jpg')`}
-    >
-    </div>
+    <Image
+      src={homeHeroImage}
+      alt="光が丘サッカー連盟所属・練馬小SCの練習風景"
+      class="absolute inset-0 w-full h-full object-cover opacity-40"
+      loading="eager"
+    />
     <div class="relative z-10 text-center px-4 max-w-4xl">
       <div
         class="inline-block bg-club-yellow text-club-blue px-4 py-1 font-black skew-x-[-15deg] mb-6"
@@ -92,6 +95,14 @@ import Button from "../components/Button.astro";
               Preschooler
             </p>
           </div>
+        </div>
+        <div class="mt-10">
+          <Button
+            href={`${import.meta.env.BASE_URL}about`}
+            class="!bg-club-blue !text-white px-10 py-4 shadow-lg hover:bg-opacity-90 transition-all text-xl font-bold rounded-full"
+          >
+            初めての方へ（チーム紹介）
+          </Button>
         </div>
       </div>
     </div>

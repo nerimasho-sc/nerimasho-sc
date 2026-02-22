@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import clubEmblem from "../assets/image/club_emblem.jpg";
 
 interface Props {
   title: string;
@@ -8,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = "練馬小学校サッカークラブ（練馬小SC）の公式ホームページです。練馬小学校を拠点に活動する、1977年創立の歴史ある地域密着チームです。",
+  description = "練馬小学校サッカークラブ（練馬小SC）の公式ホームページです。練馬小学校を拠点に活動する、1977年創立の歴史ある地域密着チームです。光が丘少年サッカー連盟に所属し、全学年を対象にサッカーを通じた健全な育成を目指しています。体験・見学のご案内もこちらから。",
 } = Astro.props;
 
 const pathname = new URL(Astro.request.url).pathname;
@@ -85,10 +87,13 @@ const isActive = (path: string) => {
           <div
             class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-club-blue bg-yellow-300 flex-shrink-0"
           >
-            <img
-              src={`${import.meta.env.BASE_URL}image/club_emblem.jpg`}
+            <Image
+              src={clubEmblem}
               alt="練馬小SC エンブレム"
               class="w-full h-full object-contain p-0.5"
+              width={48}
+              height={48}
+              loading="eager"
             />
           </div>
           <div class="flex flex-col">
