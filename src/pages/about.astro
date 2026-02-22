@@ -2,6 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Button from "../components/Button.astro";
+
+import { Image } from "astro:assets";
+import practiceImage1 from "../assets/image/practice_scene_01.jpg";
+import practiceImage2 from "../assets/image/practice_scene_02.jpg";
 ---
 
 <Layout
@@ -82,6 +86,37 @@ import Button from "../components/Button.astro";
             <p class="text-gray-700 leading-relaxed">
               サッカー経験がなくても大丈夫。専任のコーチが一人ひとりのレベルに合わせて丁寧に指導します。また、女の子の部員も在籍しており、性別を問わず仲良く元気に活動しています。まずは「ボールを蹴る楽しさ」から体験してみませんか？
             </p>
+          </div>
+        </div>
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="relative group overflow-hidden rounded-[2rem] shadow-xl "
+          >
+            <Image
+              src={practiceImage1}
+              alt="練馬小学校での練習風景"
+              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent text-white"
+            >
+              <p class="font-bold italic">明るく元気に練習中！</p>
+            </div>
+          </div>
+
+          <div
+            class="relative group overflow-hidden rounded-[2rem] shadow-xl mt-8 md:mt-0"
+          >
+            <Image
+              src={practiceImage2}
+              alt="試合や練習での一コマ"
+              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent text-white"
+            >
+              <p class="font-bold italic">仲間と一緒に成長しよう</p>
+            </div>
           </div>
         </div>
       </div>
