@@ -5,7 +5,7 @@ import Button from "../components/Button.astro";
 
 import { Image } from "astro:assets";
 import practiceImage1 from "../assets/image/practice_scene_01.jpg";
-import practiceImage2 from "../assets/image/practice_scene_02.jpg";
+import practiceImage2 from "../assets/image/nerimashosc_home.jpg";
 ---
 
 <Layout
@@ -88,34 +88,34 @@ import practiceImage2 from "../assets/image/practice_scene_02.jpg";
             </p>
           </div>
         </div>
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div
-            class="relative group overflow-hidden rounded-[2rem] shadow-xl "
-          >
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="relative group overflow-hidden rounded-2xl shadow-lg">
             <Image
-              src={practiceImage1}
-              alt="練馬小学校での練習風景"
-              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              src={practiceImage2}
+              alt="集合写真：一生モノの仲間に出会おう！"
+              class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
             />
             <div
-              class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent text-white"
+              class="absolute bottom-0 left-0 right-0 p-4 bg-black/60 text-white text-center"
             >
-              <p class="font-bold italic">明るく元気に練習中！</p>
+              <p class="font-bold text-ms md:text-base italic">
+                一生モノの仲間に出会おう！
+              </p>
             </div>
           </div>
 
-          <div
-            class="relative group overflow-hidden rounded-[2rem] shadow-xl mt-8 md:mt-0"
-          >
+          <div class="relative group overflow-hidden rounded-2xl shadow-lg">
             <Image
-              src={practiceImage2}
-              alt="試合や練習での一コマ"
-              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              src={practiceImage1}
+              alt="集合写真：一生モノの仲間に出会おう！"
+              class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
             />
             <div
-              class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent text-white"
+              class="absolute bottom-0 left-0 right-0 p-4 bg-black/60 text-white text-center"
             >
-              <p class="font-bold italic">仲間と一緒に成長しよう</p>
+              <p class="font-bold text-ms md:text-base italic">
+                明るく元気に練習中！初心者も大歓迎です。
+              </p>
             </div>
           </div>
         </div>

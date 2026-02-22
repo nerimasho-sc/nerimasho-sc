@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import { Image } from "astro:assets";
-import clubEmblem from "../assets/image/club_emblem.jpg";
+import clubEmblem from "../assets/image/club_emblem.svg";
 
 interface Props {
   title: string;
@@ -46,7 +46,7 @@ const isActive = (path: string) => {
     <link
       rel="icon"
       type="image/svg+xml"
-      href={`${import.meta.env.BASE_URL}image/club_emblem.jpg`}
+      href={`${import.meta.env.BASE_URL}image/club_emblem.svg`}
     />
     <meta name="generator" content={Astro.generator} />
     <title>
@@ -60,7 +60,7 @@ const isActive = (path: string) => {
     />
     <meta
       property="og:image"
-      content="https://nerimasho-sc.github.io/nerimasho-sc/image/club_emblem.jpg"
+      content="https://nerimasho-sc.github.io/nerimasho-sc/image/club_emblem.svg"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -83,29 +83,31 @@ const isActive = (path: string) => {
       <div
         class="container mx-auto px-4 py-3 flex justify-between items-center"
       >
-        <a href={import.meta.env.BASE_URL} class="flex items-center gap-3">
-          <div
-            class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-club-blue bg-yellow-300 flex-shrink-0"
-          >
+        <a
+          href={import.meta.env.BASE_URL}
+          class="flex items-center gap-4 group"
+        >
+          <div class="w-12 h-12 md:w-14 md:h-14 flex-shrink-0">
             <Image
               src={clubEmblem}
-              alt="練馬小SC エンブレム"
-              class="w-full h-full object-contain p-0.5"
-              width={48}
-              height={48}
+              alt="エンブレム"
+              class="w-full h-full object-contain drop-shadow-md"
+              width={120}
+              height={120}
               loading="eager"
             />
           </div>
-          <div class="flex flex-col">
+
+          <div class="flex flex-col border-l-2 border-club-blue/20 pl-4 py-1">
             <span
-              class="text-xl md:text-2xl font-black italic tracking-tighter leading-none"
+              class="text-xl md:text-2xl font-black italic tracking-tighter leading-none text-club-blue"
             >
               NERIMASHO SC
             </span>
             <span
-              class="hidden lg:inline-block text-[10px] font-bold border-l border-club-blue/30 pl-2 leading-tight mt-1"
+              class="text-[10px] md:text-xs font-bold text-club-blue/80 leading-none mt-1.5 uppercase tracking-widest"
             >
-              練馬小学校<br />サッカークラブ
+              練馬小学校サッカークラブ
             </span>
           </div>
         </a>
