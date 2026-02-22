@@ -1,6 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+
+import { Image } from "astro:assets";
+import kanekoImg from "../assets/image/staff/01_kaneko.jpg";
+import tanakaImg from "../assets/image/staff/02_tanaka.jpg";
+import masudaImg from "../assets/image/staff/03_masuda.jpg";
+import hamaokaImg from "../assets/image/staff/04_hamaoka.jpg";
+import tomizawaImg from "../assets/image/staff/05_tomizawa.jpg";
+import takagiImg from "../assets/image/staff/06_takagi.jpg";
 ---
 
 <Layout
@@ -106,81 +114,271 @@ import Card from "../components/Card.astro";
       <div class="space-y-12">
         <!-- 役員 -->
         <div class="grid md:grid-cols-3 gap-6">
-          <Card class="text-center">
-            <p class="text-xs font-bold text-club-red mb-1">代表</p>
-            <p class="text-xl font-black mb-2">金子 幸広</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFAサッカー4級審判員</p>
-            <p class="text-[10px] text-gray-500 mb-2">
-              マッチウェルフェアオフィサー
-            </p>
-            <p class="text-sm font-medium italic">
-              褒められた子供の笑顔を見ると嬉しくなります。笑顔が絶えないチーム運営を心掛けています。
-            </p>
+          <Card class="!p-4">
+            <div class="flex items-center gap-5">
+              <div class="flex-shrink-0">
+                <div
+                  class="w-20 h-20 rounded-full overflow-hidden border-2 border-club-yellow shadow-sm bg-gray-50"
+                >
+                  <Image
+                    src={kanekoImg}
+                    alt="代表 金子 幸広"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-grow text-left">
+                <div class="mb-1">
+                  <span
+                    class="text-[12px] font-bold text-club-red border border-club-red px-1.5 py-0.5 rounded uppercase tracking-wider"
+                  >
+                    代表
+                  </span>
+                </div>
+                <p class="text-xl font-black text-club-blue mb-0.5">
+                  金子 幸広
+                </p>
+                <div
+                  class="flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-gray-400"
+                >
+                  <span>JFA公認D級指導者</span>
+                  <span class="before:content-['/'] before:mr-1"
+                    >JFA4級審判</span
+                  >
+                  <span class="before:content-['/'] before:mr-1"
+                    >マルチウェルフェアオフィサー</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-gray-100">
+              <p
+                class="text-sm leading-relaxed font-medium italic text-gray-600"
+              >
+                "褒められた子供の笑顔を見ると嬉しくなります。笑顔が絶えないチーム運営を心掛けています。"
+              </p>
+            </div>
           </Card>
-          <Card class="text-center">
-            <p class="text-xs font-bold text-club-red mb-1">副代表</p>
-            <p class="text-xl font-black mb-2">田中 誠一</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFAサッカー4級審判員</p>
-            <p class="text-[10px] text-gray-500 mb-2">
-              マッチウェルフェアオフィサー
-            </p>
-            <p class="text-sm font-medium italic">
-              友達との比較より、過去の自分との比較で上達を感じられる指導を行います。
-            </p>
+          <Card class="!p-4">
+            <div class="flex items-center gap-5">
+              <div class="flex-shrink-0">
+                <div
+                  class="w-20 h-20 rounded-full overflow-hidden border-2 border-club-yellow shadow-sm bg-gray-50"
+                >
+                  <Image
+                    src={tanakaImg}
+                    alt="副代表 田中 誠一"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-grow text-left">
+                <div class="mb-1">
+                  <span
+                    class="text-[12px] font-bold text-club-red border border-club-red px-1.5 py-0.5 rounded uppercase tracking-wider"
+                  >
+                    副代表
+                  </span>
+                </div>
+                <p class="text-xl font-black text-club-blue mb-0.5">
+                  田中 誠一
+                </p>
+                <div
+                  class="flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-gray-400"
+                >
+                  <span>JFA公認D級指導者</span>
+                  <span class="before:content-['/'] before:mr-1"
+                    >JFA4級審判</span
+                  >
+                  <span class="before:content-['/'] before:mr-1"
+                    >マッチウェルフェアオフィサー</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-gray-100">
+              <p
+                class="text-sm leading-relaxed font-medium italic text-gray-600"
+              >
+                "友達との比較より、過去の自分との比較で上達を感じられる指導を行います。"
+              </p>
+            </div>
           </Card>
-          <Card class="text-center border-club-blue/20">
-            <p class="text-xs font-bold text-club-red mb-1">顧問</p>
-            <p class="text-xl font-black mb-2">増田 隆彰</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
-            <p class="text-[10px] text-gray-500 mb-2">
-              マッチウェルフェアオフィサー
-            </p>
-            <p class="text-[10px] text-gray-500 mb-2">
-              <br />
-            </p>
-            <p class="text-sm font-medium italic">
-              「サッカーは、子どもを大人にする」をモットーに子ども達の資質を伸ばします！
-            </p>
+          <Card class="!p-4">
+            <div class="flex items-center gap-5">
+              <div class="flex-shrink-0">
+                <div
+                  class="w-20 h-20 rounded-full overflow-hidden border-2 border-club-yellow shadow-sm bg-gray-50"
+                >
+                  <Image
+                    src={masudaImg}
+                    alt="顧問 増田 隆彰"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-grow text-left">
+                <div class="mb-1">
+                  <span
+                    class="text-[12px] font-bold text-club-red border border-club-red px-1.5 py-0.5 rounded uppercase tracking-wider"
+                  >
+                    顧問
+                  </span>
+                </div>
+                <p class="text-xl font-black text-club-blue mb-0.5">
+                  増田 隆彰
+                </p>
+                <div
+                  class="flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-gray-400"
+                >
+                  <span>JFA公認D級指導者</span>
+                  <span class="before:content-['/'] before:mr-1"
+                    >マッチウェルフェアオフィサー</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-gray-100">
+              <p
+                class="text-sm leading-relaxed font-medium italic text-gray-600"
+              >
+                "「サッカーは、子どもを大人にする」をモットーに子ども達の資質を伸ばします！"
+              </p>
+            </div>
           </Card>
-          <Card class="text-center border-club-blue/20">
-            <p class="text-xs font-bold text-club-red mb-1">監督</p>
-            <p class="text-xl font-black mb-2">濱岡 篤</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFA公認C級指導者</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFAサッカー4級審判員</p>
-            <p class="text-[10px] text-gray-500 mb-2">
-              マッチウェルフェアオフィサー
-            </p>
-            <p class="text-sm font-medium italic">
-              サッカー大好き、一緒にサッカーに取り組み、楽しみましょう！
-            </p>
+          <Card class="!p-4">
+            <div class="flex items-center gap-5">
+              <div class="flex-shrink-0">
+                <div
+                  class="w-20 h-20 rounded-full overflow-hidden border-2 border-club-yellow shadow-sm bg-gray-50"
+                >
+                  <Image
+                    src={hamaokaImg}
+                    alt="監督 濱岡 篤"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-grow text-left">
+                <div class="mb-1">
+                  <span
+                    class="text-[12px] font-bold text-club-red border border-club-red px-1.5 py-0.5 rounded uppercase tracking-wider"
+                  >
+                    監督
+                  </span>
+                </div>
+                <p class="text-xl font-black text-club-blue mb-0.5">濱岡 篤</p>
+                <div
+                  class="flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-gray-400"
+                >
+                  <span>JFA公認C級指導者</span>
+                  <span class="before:content-['/'] before:mr-1"
+                    >JFA4級審判</span
+                  >
+                  <span class="before:content-['/'] before:mr-1"
+                    >マッチウェルフェアオフィサー</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-gray-100">
+              <p
+                class="text-sm leading-relaxed font-medium italic text-gray-600"
+              >
+                "サッカー大好き、一緒にサッカーに取り組み、楽しみましょう！"
+              </p>
+            </div>
           </Card>
-          <Card class="text-center border-club-blue/20">
-            <p class="text-xs font-bold text-club-red mb-1">コーチ</p>
-            <p class="text-xl font-black mb-2">富澤 孝</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFAサッカー4級審判員</p>
-            <p class="text-[10px] text-gray-500 mb-2">
-              <br />
-            </p>
-            <p class="text-sm font-medium italic">
-              サッカーは技術が向上すればするほどより深く楽しめます。一緒に汗を流しましょう！
-            </p>
+          <Card class="!p-4">
+            <div class="flex items-center gap-5">
+              <div class="flex-shrink-0">
+                <div
+                  class="w-20 h-20 rounded-full overflow-hidden border-2 border-club-yellow shadow-sm bg-gray-50"
+                >
+                  <Image
+                    src={tomizawaImg}
+                    alt="コーチ 富澤 孝"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-grow text-left">
+                <div class="mb-1">
+                  <span
+                    class="text-[12px] font-bold text-club-red border border-club-red px-1.5 py-0.5 rounded uppercase tracking-wider"
+                  >
+                    コーチ
+                  </span>
+                </div>
+                <p class="text-xl font-black text-club-blue mb-0.5">富澤 孝</p>
+                <div
+                  class="flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-gray-400"
+                >
+                  <span>JFA公認D級指導者</span>
+                  <span class="before:content-['/'] before:mr-1"
+                    >JFA4級審判</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-gray-100">
+              <p
+                class="text-sm leading-relaxed font-medium italic text-gray-600"
+              >
+                "サッカーは技術が向上すればするほどより深く楽しめます。一緒に汗を流しましょう！"
+              </p>
+            </div>
           </Card>
-          <Card class="text-center border-club-blue/20">
-            <p class="text-xs font-bold text-club-red mb-1">コーチ</p>
-            <p class="text-xl font-black mb-2">高木 充彦</p>
-            <p class="text-[10px] text-gray-500 mb-2">JFA公認D級指導者</p>
-            <p class="text-[10px] text-gray-500 mb-2">
-              <br />
-            </p>
-            <p class="text-[10px] text-gray-500 mb-2">
-              <br />
-            </p>
-            <p class="text-sm font-medium italic">
-              「サッカーは、人生の縮図です」包容力のあるマルチ指導者
-            </p>
+          <Card class="!p-4">
+            <div class="flex items-center gap-5">
+              <div class="flex-shrink-0">
+                <div
+                  class="w-20 h-20 rounded-full overflow-hidden border-2 border-club-yellow shadow-sm bg-gray-50"
+                >
+                  <Image
+                    src={takagiImg}
+                    alt="コーチ 高木 充彦"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class="flex-grow text-left">
+                <div class="mb-1">
+                  <span
+                    class="text-[12px] font-bold text-club-red border border-club-red px-1.5 py-0.5 rounded uppercase tracking-wider"
+                  >
+                    コーチ
+                  </span>
+                </div>
+                <p class="text-xl font-black text-club-blue mb-0.5">
+                  高木 充彦
+                </p>
+                <div
+                  class="flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-gray-400"
+                >
+                  <span>JFA公認D級指導者</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-gray-100">
+              <p
+                class="text-sm leading-relaxed font-medium italic text-gray-600"
+              >
+                "「サッカーは人生の縮図です」包容力のあるマルチ指導者"
+              </p>
+            </div>
           </Card>
         </div>
 
